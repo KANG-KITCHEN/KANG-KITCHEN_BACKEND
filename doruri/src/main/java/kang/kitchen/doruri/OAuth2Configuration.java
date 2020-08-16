@@ -16,10 +16,10 @@ import java.util.Collections;
 @Configuration
 public class OAuth2Configuration {
 
-//    @Bean
-//    public OAuth2AuthorizedClientService authorizedClientService(OAuth2AuthorizedClientService myOAuth2AuthorizedClientService) {
-//        return myOAuth2AuthorizedClientService;
-//    }
+    @Bean
+    public OAuth2AuthorizedClientService authorizedClientService(MyOAuth2AuthorizedClientService myOAuth2AuthorizedClientService) {
+        return myOAuth2AuthorizedClientService;
+    }
 
     @Bean
     public ClientRegistrationRepository clientRegistrationRepository() {
