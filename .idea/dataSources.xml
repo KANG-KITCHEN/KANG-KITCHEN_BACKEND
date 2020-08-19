@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="doruri_database@49.50.161.155" uuid="178ac396-2a09-4c19-a8ab-727c737850b6">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://49.50.161.155:3306/doruri_database?serverTimezone=UTC</jdbc-url>
+    </data-source>
+  </component>
+</project>

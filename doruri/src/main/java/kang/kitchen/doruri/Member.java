@@ -13,9 +13,6 @@ import javax.persistence.*;
 public class Member {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
     @Column
     private String oauthId;
 
@@ -28,11 +25,15 @@ public class Member {
     @Column
     private String accessToken;
 
-    public Member(String oauthId, String name, String providerName, String accessToken) {
+    @Column
+    private String allergy_list;
+
+    public Member(String oauthId, String name, String providerName, String accessToken, String allergy_list) {
 
         this.oauthId = oauthId;
         this.name = name;
         this.providerName = providerName;
         this.accessToken = accessToken;
+        this.allergy_list = allergy_list;
     }
 }
