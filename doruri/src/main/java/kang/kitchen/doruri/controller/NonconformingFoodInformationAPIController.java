@@ -1,5 +1,7 @@
 package kang.kitchen.doruri.controller;
 
+import org.json.JSONObject;
+import org.json.XML;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -31,7 +33,6 @@ public class NonconformingFoodInformationAPIController {
             System.out.println(urlconenction.getContentEncoding());
             BufferedReader br = new BufferedReader(new InputStreamReader(urlconenction.getInputStream(),"UTF-8"));
             String returnLine;
-            result.append("<xmp>");
             while((returnLine = br.readLine()) != null) {
                 result.append(returnLine);
             }
@@ -39,7 +40,8 @@ public class NonconformingFoodInformationAPIController {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return result + "</xmp>";
+        JSONObject xmlJSONObj = XML.toJSONObject(result.toString());
+        return xmlJSONObj.toString();
 
     }
 }
