@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/KANG-KITCHEN_BACKEND.iml" filepath="$PROJECT_DIR$/.idea/KANG-KITCHEN_BACKEND.iml" />
+      <module fileurl="file://$PROJECT_DIR$/doruri/doruri.iml" filepath="$PROJECT_DIR$/doruri/doruri.iml" />
     </modules>
   </component>
 </project>
