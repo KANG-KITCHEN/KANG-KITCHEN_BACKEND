@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
 
     @GetMapping
+    @ResponseBody
     public String getMyAuthenticationFromSession(@AuthenticationPrincipal OAuth2User oAuth2User) {
         return oAuth2User.toString();
     }
