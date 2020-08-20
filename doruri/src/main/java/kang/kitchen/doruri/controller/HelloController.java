@@ -12,6 +12,11 @@ public class HelloController {
     @Autowired
     private MyOAuth2AuthorizedClientService myService;
 
+    @RequestMapping("/")
+    public String WelcomeAPI() {
+        return "도르리 API";
+    }
+
     @GetMapping
     @ResponseBody
     @RequestMapping("/my")
@@ -21,7 +26,7 @@ public class HelloController {
     }
 
     @GetMapping
-    @RequestMapping(value = "/api/update_allergy")
+    @RequestMapping(value = "/update_allergy")
     public String putMyAuthenticationFromSession(@AuthenticationPrincipal OAuth2User oAuth2User, @RequestParam String Allergy) {
         return myService.update(oAuth2User.getName().toString(), Allergy).toString();
     }
