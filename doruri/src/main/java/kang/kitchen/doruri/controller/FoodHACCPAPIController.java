@@ -1,6 +1,5 @@
 package kang.kitchen.doruri.controller;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.XML;
 import org.springframework.web.bind.annotation.GetMapping;

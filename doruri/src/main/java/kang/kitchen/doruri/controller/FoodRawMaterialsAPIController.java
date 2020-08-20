@@ -1,7 +1,5 @@
 package kang.kitchen.doruri.controller;
 
-import org.json.JSONObject;
-import org.json.XML;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,7 +27,6 @@ public class FoodRawMaterialsAPIController {
 
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
-            System.out.println(urlConnection.getContentEncoding());
             BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
             String returnLine;
             while ((returnLine = br.readLine()) != null) {

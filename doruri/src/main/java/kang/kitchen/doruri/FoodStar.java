@@ -3,6 +3,7 @@ package kang.kitchen.doruri;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class FoodStar {
     private List<Member> members = new ArrayList<Member>();
 
 
-    public FoodStar(Long prdlstReportNo,Float rating, Integer participant) {
+    public FoodStar(Long prdlstReportNo, Float rating, Integer participant) {
         this.prdlstReportNo = prdlstReportNo;
         this.rating = rating;
         this.participant = participant;
