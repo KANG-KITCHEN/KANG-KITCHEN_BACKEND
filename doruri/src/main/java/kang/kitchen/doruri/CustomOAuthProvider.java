@@ -20,7 +20,6 @@ public enum CustomOAuthProvider {
         }
     };
 
-    // http://localhost:8080/oauth2/authorization/kakao
     private static final String DEFAULT_LOGIN_REDIRECT_URL = "{baseUrl}/login/oauth2/code/{registrationId}";
 
     protected final ClientRegistration.Builder getBuilder(String registrationId,
