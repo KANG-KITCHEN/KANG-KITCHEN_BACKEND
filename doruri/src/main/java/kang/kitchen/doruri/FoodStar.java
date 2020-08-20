@@ -1,10 +1,11 @@
 package kang.kitchen.doruri;
 
 import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
@@ -20,6 +21,10 @@ public class FoodStar {
 
     @Column
     private Integer participant;
+
+    @ManyToMany
+    private List<Member> members = new ArrayList<Member>();
+
 
     public FoodStar(Long prdlstReportNo,Float rating, Integer participant) {
         this.prdlstReportNo = prdlstReportNo;

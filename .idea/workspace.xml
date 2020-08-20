@@ -23,19 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f85098d3-1ea5-44e2-abb9-0a489f94da25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_13_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/FoodStar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/FoodStarList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/controller/FoodHACCPAPIController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/controller/FoodSearchAPIController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/controller/FoodStarAPIController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/FoodStarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/178ac396-2a09-4c19-a8ab-727c737850b6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/178ac396-2a09-4c19-a8ab-727c737850b6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doruri/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/doruri/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/FoodStar.java" beforeDir="false" afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/FoodStar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/FoodStarList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/Member.java" beforeDir="false" afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/Member.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/MyOAuth2AuthorizedClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/MyOAuth2AuthorizedClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/controller/FoodRawMaterialsAPIController.java" beforeDir="false" afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/controller/FoodRawMaterialsAPIController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/controller/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/doruri/src/main/java/kang/kitchen/doruri/controller/HelloController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doruri/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/doruri/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -123,15 +117,13 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.DoruriApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -166,7 +158,8 @@
       <updated>1597152860829</updated>
       <workItem from="1597152863396" duration="153000" />
       <workItem from="1597800352274" duration="17497000" />
-      <workItem from="1597841755118" duration="14393000" />
+      <workItem from="1597841755118" duration="14833000" />
+      <workItem from="1597886680583" duration="8226000" />
     </task>
     <servers />
   </component>
@@ -186,6 +179,14 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="857" y="409" key="#Assign_Data_Sources" timestamp="1597890118759">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="857" y="409" key="#Assign_Data_Sources/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597890118759" />
+    <state x="727" y="49" key="#Auto_Import" timestamp="1597891195672">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="727" y="49" key="#Auto_Import/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597891195672" />
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597855312896">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -202,38 +203,46 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="706" y="350" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040@0.0.1920.1040" timestamp="1597851784017" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1597857682775">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1597897452956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597857682775" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1597857682775">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597897452956" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597893866426" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1597897452956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597857682775" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1597857682774">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597897452956" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597893866426" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1597897452956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597857682774" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1597857682775">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597897452956" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597893866425" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1597897452956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597857682775" />
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1597857682775">
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597897452956" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597893866426" />
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom" timestamp="1597897452956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597857682775" />
-    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1597857682775">
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597897452956" />
+    <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1597893866426" />
+    <state width="1877" height="282" key="GridCell.Tab.1.center" timestamp="1597897452956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597857682775" />
-    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1597857682775">
+    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597897452956" />
+    <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1597893866426" />
+    <state width="1877" height="282" key="GridCell.Tab.1.left" timestamp="1597897452956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597857682775" />
-    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1597857682775">
+    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597897452956" />
+    <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1597893866426" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right" timestamp="1597897452956">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597857682775" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597897452956" />
+    <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597893866426" />
     <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1597827659807">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -250,6 +259,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597827659807" />
+    <state x="850" y="406" width="322" height="250" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1597893853982">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="850" y="406" width="322" height="250" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1597891626203" />
+    <state x="850" y="406" width="322" height="250" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.0.1920.1040@0.0.1920.1040" timestamp="1597893853982" />
     <state x="690" y="324" key="com.intellij.database.dbimport.ImportUtil.ChooseTargetDialog" timestamp="1597857800152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

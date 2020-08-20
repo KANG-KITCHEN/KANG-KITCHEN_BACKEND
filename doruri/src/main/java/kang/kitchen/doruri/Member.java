@@ -5,11 +5,15 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 @Entity
+
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+
 public class Member {
 
     @Id
@@ -27,6 +31,9 @@ public class Member {
 
     @Column
     private String allergy_list;
+
+
+
 
     public Member(String oauthId, String name, String providerName, String accessToken, String allergy_list) {
 
