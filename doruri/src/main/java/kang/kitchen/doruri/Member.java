@@ -10,7 +10,6 @@ import java.util.List;
 
 
 @Entity
-
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 
@@ -34,7 +33,6 @@ public class Member {
 
 
 
-
     public Member(String oauthId, String name, String providerName, String accessToken, String allergy_list) {
 
         this.oauthId = oauthId;
@@ -43,4 +41,9 @@ public class Member {
         this.accessToken = accessToken;
         this.allergy_list = allergy_list;
     }
+
+    public void update(String allergy_list) {
+        this.allergy_list = allergy_list;
+    }
+
 }
