@@ -5,7 +5,7 @@
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://49.50.161.155:3306/doruri_database?serverTimezone=UTC</jdbc-url>
+      <jdbc-url>jdbc:mysql://49.50.161.155:20005/doruri_database?serverTimezone=UTC</jdbc-url>
     </data-source>
   </component>
 </project>
