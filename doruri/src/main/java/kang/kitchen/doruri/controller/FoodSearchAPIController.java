@@ -18,15 +18,15 @@ public class FoodSearchAPIController {
     public String getApiHttp(@RequestParam String food_str) {
         // food_str -> 1. 사이트 주소인지 2. 검색어인지 판별
         // Service Case 1 : Coupang
-        if(food_str.contains("coupang.com")) {
+        if (food_str.contains("coupang.com")) {
             Document doc = null;
             try {
                 doc = Jsoup.connect(food_str).get();
                 String content = doc.select("meta[property=og:title]").first().attr("content");
                 String img = doc.select("meta[property=og:image]").first().attr("content");
                 JSONObject js_object = new JSONObject();
-                js_object.put("product_name",content);
-                js_object.put("img",img);
+                js_object.put("product_name", content);
+                js_object.put("img", img);
                 return js_object.toString();
 
             } catch (IOException e) {

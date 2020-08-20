@@ -18,23 +18,24 @@ public class FoodRawMaterialsAPIController {
     String SERVICE_KEY = "867f3dd43c874330b921";
     static final String API_END_POINT = "http://openapi.foodsafetykorea.go.kr/api";
     static final String API_FUNC_POINT = "C002";
+
     @GetMapping("/api/food_raw_materials")
     public String getApiHttp(@RequestParam String prdlst_nm) {
         StringBuffer result = new StringBuffer();
 
         try {
-            String urlstr = API_END_POINT+"/"+SERVICE_KEY+"/"+API_FUNC_POINT+"/json"+"/1/100/"+"PRDLST_NM="+ URLEncoder.encode(prdlst_nm,"UTF-8");
-            URL url = new URL(urlstr);
+            String urlStr = API_END_POINT + "/" + SERVICE_KEY + "/" + API_FUNC_POINT + "/json" + "/1/100/" + "PRDLST_NM=" + URLEncoder.encode(prdlst_nm, "UTF-8");
+            URL url = new URL(urlStr);
 
-            HttpURLConnection urlconenction = (HttpURLConnection) url.openConnection();
-            urlconenction.setRequestMethod("GET");
-            System.out.println(urlconenction.getContentEncoding());
-            BufferedReader br = new BufferedReader(new InputStreamReader(urlconenction.getInputStream(),"UTF-8"));
+            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setRequestMethod("GET");
+            System.out.println(urlConnection.getContentEncoding());
+            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
             String returnLine;
-            while((returnLine = br.readLine()) != null) {
+            while ((returnLine = br.readLine()) != null) {
                 result.append(returnLine);
             }
-            urlconenction.disconnect();
+            urlConnection.disconnect();
         } catch (Exception e) {
             e.printStackTrace();
         }

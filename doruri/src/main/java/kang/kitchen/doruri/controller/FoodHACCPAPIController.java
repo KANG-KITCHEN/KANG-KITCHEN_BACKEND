@@ -26,19 +26,18 @@ public class FoodHACCPAPIController {
         StringBuffer result = new StringBuffer();
 
         try {
-            String urlstr = API_END_POINT+"/"+API_FUNC_POINT+"?ServiceKey="+SERVICE_KEY+"&prdlstReportNo="+ URLEncoder.encode(prdlstReportNo,"UTF-8");
-            URL url = new URL(urlstr);
+            String urlStr = API_END_POINT + "/" + API_FUNC_POINT + "?ServiceKey=" + SERVICE_KEY + "&prdlstReportNo=" + URLEncoder.encode(prdlstReportNo, "UTF-8");
+            URL url = new URL(urlStr);
 
-            HttpURLConnection urlconenction = (HttpURLConnection) url.openConnection();
-            urlconenction.setRequestMethod("GET");
-            System.out.println(urlconenction.getContentEncoding());
-            BufferedReader br = new BufferedReader(new InputStreamReader(urlconenction.getInputStream(),"UTF-8"));
+            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setRequestMethod("GET");
+            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
             String returnLine;
 
-            while((returnLine = br.readLine()) != null) {
+            while ((returnLine = br.readLine()) != null) {
                 result.append(returnLine);
             }
-            urlconenction.disconnect();
+            urlConnection.disconnect();
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -46,6 +45,5 @@ public class FoodHACCPAPIController {
 
         JSONObject xmlJSONObj = XML.toJSONObject(result.toString());
         return xmlJSONObj.toString();
-
     }
 }

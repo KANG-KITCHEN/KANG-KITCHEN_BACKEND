@@ -19,19 +19,20 @@ public class FoodRecallInformationAPIController {
     //https://www.consumer.go.kr/openapi/recall/contents/index.do?serviceKey=XXXXXXXXXX&pageNo=1 &cntPerPage=10&cntntsId=메뉴ID
     static final String API_END_POINT = "https://www.consumer.go.kr/openapi/recall/contents/index.do?";
     static final String API_FUNC_POINT = "pageNo=1&cntPerPage=50&cntntsId=0201";
+
     @GetMapping("/api/food_recall_information")
 
     public String getApiHttp() {
         StringBuffer result = new StringBuffer();
         try {
-            String urlStr = API_END_POINT+"serviceKey="+SERVICE_KEY+"&"+API_FUNC_POINT;
+            String urlStr = API_END_POINT + "serviceKey=" + SERVICE_KEY + "&" + API_FUNC_POINT;
             URL url = new URL(urlStr);
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             System.out.println(urlConnection.getContentEncoding());
-            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(),"UTF-8"));
+            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
             String returnLine;
-            while((returnLine = br.readLine()) != null) {
+            while ((returnLine = br.readLine()) != null) {
                 result.append(returnLine);
             }
             urlConnection.disconnect();
@@ -39,5 +40,6 @@ public class FoodRecallInformationAPIController {
             e.printStackTrace();
         }
         JSONObject xmlJSONObj = XML.toJSONObject(result.toString());
-        return xmlJSONObj.toString();    }
+        return xmlJSONObj.toString();
+    }
 }

@@ -17,23 +17,24 @@ public class FoodIngreidentAPIController {
     String SERVICE_KEY = "zB2dcESUiLERgLWmoOjpdFZj5TCULBlxmRtv7%2B72bA4EUAN1f%2BBF9XA%2BrNClYK6XVtWbytBUiv1AoYF3eizWrw%3D%3D";
     static final String API_END_POINT = "http://apis.data.go.kr/1470000/FoodNtrIrdntInfoService";
     static final String API_FUNC_POINT = "getFoodNtrItdntList";
-        @GetMapping("/api/food_ingredent")
+
+    @GetMapping("/api/food_ingredent")
     public String getApiHttp(@RequestParam String desc_kor) {
         StringBuffer result = new StringBuffer();
 
         try {
-            String urlstr = API_END_POINT+"/"+API_FUNC_POINT+"?ServiceKey="+SERVICE_KEY+"&desc_kor="+ URLEncoder.encode(desc_kor,"UTF-8");
+            String urlstr = API_END_POINT + "/" + API_FUNC_POINT + "?ServiceKey=" + SERVICE_KEY + "&desc_kor=" + URLEncoder.encode(desc_kor, "UTF-8");
             URL url = new URL(urlstr);
 
-            HttpURLConnection urlconenction = (HttpURLConnection) url.openConnection();
-            urlconenction.setRequestMethod("GET");
-            System.out.println(urlconenction.getContentEncoding());
-            BufferedReader br = new BufferedReader(new InputStreamReader(urlconenction.getInputStream(),"UTF-8"));
+            HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setRequestMethod("GET");
+            System.out.println(urlConnection.getContentEncoding());
+            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
             String returnLine;
-            while((returnLine = br.readLine()) != null) {
+            while ((returnLine = br.readLine()) != null) {
                 result.append(returnLine);
             }
-            urlconenction.disconnect();
+            urlConnection.disconnect();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -26,15 +26,15 @@ public class NonconformingFoodInformationApiController {
         StringBuffer result = new StringBuffer();
 
         try {
-            String urlStr = API_END_POINT+"/"+API_FUNC_POINT+"?ServiceKey="+SERVICE_KEY+"&Prduct="+ URLEncoder.encode(prduct,"UTF-8");
+            String urlStr = API_END_POINT + "/" + API_FUNC_POINT + "?ServiceKey=" + SERVICE_KEY + "&Prduct=" + URLEncoder.encode(prduct, "UTF-8");
             URL url = new URL(urlStr);
 
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
             System.out.println(urlConnection.getContentEncoding());
-            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(),"UTF-8"));
+            BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
             String returnLine;
-            while((returnLine = br.readLine()) != null) {
+            while ((returnLine = br.readLine()) != null) {
                 result.append(returnLine);
             }
             urlConnection.disconnect();
