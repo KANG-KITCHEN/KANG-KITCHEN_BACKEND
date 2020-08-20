@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
+
     @Autowired
     private MyOAuth2AuthorizedClientService myService;
 
     @RequestMapping("/")
-    public String WelcomeAPI() {
+    public String welcomeAPI() {
         return "도르리 API";
     }
 
@@ -27,7 +28,7 @@ public class HelloController {
 
     @GetMapping
     @RequestMapping(value = "/update_allergy")
-    public String putMyAuthenticationFromSession(@AuthenticationPrincipal OAuth2User oAuth2User, @RequestParam String Allergy) {
-        return myService.update(oAuth2User.getName().toString(), Allergy).toString();
+    public String putMyAuthenticationFromSession(@AuthenticationPrincipal OAuth2User oAuth2User, @RequestParam String allergy) {
+        return myService.update(oAuth2User.getName().toString(), allergy).toString();
     }
 }

@@ -24,7 +24,7 @@ public class FoodStar {
     private Integer participant;
 
     @ManyToMany
-    private List<Member> members = new ArrayList<Member>();
+    private List<Member> members = new ArrayList<>();
 
 
     public FoodStar(Long prdlstReportNo, Float rating, Integer participant) {

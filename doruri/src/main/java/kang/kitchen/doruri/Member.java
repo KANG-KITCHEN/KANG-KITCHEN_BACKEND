@@ -29,20 +29,20 @@ public class Member {
     private String accessToken;
 
     @Column
-    private String allergy_list;
+    private String allergyList;
 
 
-    public Member(String oauthId, String name, String providerName, String accessToken, String allergy_list) {
+    public Member(String oauthId, String name, String providerName, String accessToken, String allergyList) {
 
         this.oauthId = oauthId;
         this.name = name;
         this.providerName = providerName;
         this.accessToken = accessToken;
-        this.allergy_list = allergy_list;
+        this.allergyList = allergyList;
     }
 
-    public void update(String allergy_list) {
-        this.allergy_list = allergy_list;
+    public void update(String allergyList) {
+        this.allergyList = allergyList;
     }
 
 }
