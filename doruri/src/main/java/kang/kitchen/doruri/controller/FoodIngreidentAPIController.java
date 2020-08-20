@@ -28,7 +28,6 @@ public class FoodIngreidentAPIController {
 
             HttpURLConnection urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setRequestMethod("GET");
-            System.out.println(urlConnection.getContentEncoding());
             BufferedReader br = new BufferedReader(new InputStreamReader(urlConnection.getInputStream(), "UTF-8"));
             String returnLine;
             while ((returnLine = br.readLine()) != null) {
