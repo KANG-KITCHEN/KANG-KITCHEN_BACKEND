@@ -38,7 +38,7 @@ public class MyOAuth2AuthorizedClientService implements OAuth2AuthorizedClientSe
         String id = String.valueOf(oauth2User.getAttributes().get("id"));
         String name = (String) ((LinkedHashMap) ((LinkedHashMap) oauth2User.getAttribute("kakao_account")).get("profile")).get("nickname");
 
-        Member member = new Member(id, name, providerType, accessToken.getTokenValue(),"");
+        Member member = new Member(id, name, providerType, accessToken.getTokenValue(), "");
 
         memberRepository.save(member);
     }
@@ -47,16 +47,14 @@ public class MyOAuth2AuthorizedClientService implements OAuth2AuthorizedClientSe
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         Optional<Member> member = memberRepository.findByOauthId(id);
 
-        if(member.isPresent()) {
+        if (member.isPresent()) {
             member.get().update(allergy);
             memberRepository.save(member.get());
             return true;
-        }
-        else {
+        } else {
             return false;
         }
     }
-
 
 
     @Override

@@ -28,7 +28,7 @@ public class HelloController {
 
     @GetMapping
     @RequestMapping(value = "/api/update_allergy")
-    public String putMyAuthenticationFromSession(@AuthenticationPrincipal OAuth2User oAuth2User,@RequestParam String Allergy) {
-        return myService.update(oAuth2User.getName().toString(),Allergy).toString();
+    public String putMyAuthenticationFromSession(@AuthenticationPrincipal OAuth2User oAuth2User, @RequestParam String Allergy) {
+        return myService.update(oAuth2User.getName().toString(), Allergy).toString();
     }
 }
