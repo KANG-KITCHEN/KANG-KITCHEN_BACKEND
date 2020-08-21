@@ -16,9 +16,9 @@ import java.net.*;
 
 @RestController
 public class FoodIngreidentAPIController {
-    String SERVICE_KEY = "zB2dcESUiLERgLWmoOjpdFZj5TCULBlxmRtv7%2B72bA4EUAN1f%2BBF9XA%2BrNClYK6XVtWbytBUiv1AoYF3eizWrw%3D%3D";
-    static final String API_END_POINT = "http://apis.data.go.kr/1470000/FoodNtrIrdntInfoService";
-    static final String API_FUNC_POINT = "getFoodNtrItdntList";
+    private final String SERVICE_KEY = "zB2dcESUiLERgLWmoOjpdFZj5TCULBlxmRtv7%2B72bA4EUAN1f%2BBF9XA%2BrNClYK6XVtWbytBUiv1AoYF3eizWrw%3D%3D";
+    private final String API_END_POINT = "http://apis.data.go.kr/1470000/FoodNtrIrdntInfoService";
+    private final String API_FUNC_POINT = "getFoodNtrItdntList";
     private static final Logger logger = LoggerFactory.getLogger(FoodRawMaterialsAPIController.class);
 
     @GetMapping("/api/food_ingredent")

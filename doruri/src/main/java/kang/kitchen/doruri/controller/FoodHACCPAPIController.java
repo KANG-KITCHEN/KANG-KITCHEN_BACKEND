@@ -17,9 +17,9 @@ import java.net.*;
 // Use Product Detail Page This API.
 @RestController
 public class FoodHACCPAPIController {
-    String SERVICE_KEY = "zB2dcESUiLERgLWmoOjpdFZj5TCULBlxmRtv7%2B72bA4EUAN1f%2BBF9XA%2BrNClYK6XVtWbytBUiv1AoYF3eizWrw%3D%3D";
-    static final String API_END_POINT = "http://apis.data.go.kr/B553748/CertImgListService";
-    static final String API_FUNC_POINT = "getCertImgListService";
+    private final String SERVICE_KEY = "zB2dcESUiLERgLWmoOjpdFZj5TCULBlxmRtv7%2B72bA4EUAN1f%2BBF9XA%2BrNClYK6XVtWbytBUiv1AoYF3eizWrw%3D%3D";
+    private final String API_END_POINT = "http://apis.data.go.kr/B553748/CertImgListService";
+    private final String API_FUNC_POINT = "getCertImgListService";
     private static final Logger logger = LoggerFactory.getLogger(FoodRawMaterialsAPIController.class);
 
     // Params : 품목제조(보고)번호

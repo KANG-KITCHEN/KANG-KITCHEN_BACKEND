@@ -14,9 +14,9 @@ import java.net.*;
 // Use Search LIST -> This API
 @RestController
 public class FoodRawMaterialsAPIController {
-    String SERVICE_KEY = "867f3dd43c874330b921";
-    static final String API_END_POINT = "http://openapi.foodsafetykorea.go.kr/api";
-    static final String API_FUNC_POINT = "C002";
+    private final String SERVICE_KEY = "867f3dd43c874330b921";
+    private final String API_END_POINT = "http://openapi.foodsafetykorea.go.kr/api";
+    private final String API_FUNC_POINT = "C002";
     private static final Logger logger = LoggerFactory.getLogger(FoodRawMaterialsAPIController.class);
 
     @GetMapping("/api/food_raw_materials")

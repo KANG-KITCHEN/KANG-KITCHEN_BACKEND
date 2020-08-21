@@ -16,9 +16,9 @@ import java.net.*;
 
 @RestController
 public class NonconformingFoodInformationApiController {
-    static final String SERVICE_KEY = "zB2dcESUiLERgLWmoOjpdFZj5TCULBlxmRtv7%2B72bA4EUAN1f%2BBF9XA%2BrNClYK6XVtWbytBUiv1AoYF3eizWrw%3D%3D";
-    static final String API_END_POINT = "http://apis.data.go.kr/1470000/PrsecImproptFoodInfoService";
-    static final String API_FUNC_POINT = "getPrsecImproptFoodList";
+    private final String SERVICE_KEY = "zB2dcESUiLERgLWmoOjpdFZj5TCULBlxmRtv7%2B72bA4EUAN1f%2BBF9XA%2BrNClYK6XVtWbytBUiv1AoYF3eizWrw%3D%3D";
+    private final String API_END_POINT = "http://apis.data.go.kr/1470000/PrsecImproptFoodInfoService";
+    private final String API_FUNC_POINT = "getPrsecImproptFoodList";
     private static final Logger logger = LoggerFactory.getLogger(FoodRawMaterialsAPIController.class);
 
     @GetMapping("/api/nonconform")

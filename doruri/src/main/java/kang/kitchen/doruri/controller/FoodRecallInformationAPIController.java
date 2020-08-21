@@ -18,11 +18,10 @@ import java.net.URL;
 
 @RestController
 public class FoodRecallInformationAPIController {
-    String SERVICE_KEY = "KRDH0QNZY5";
+    private final String SERVICE_KEY = "KRDH0QNZY5";
     private static final Logger logger = LoggerFactory.getLogger(FoodRawMaterialsAPIController.class);
-    //https://www.consumer.go.kr/openapi/recall/contents/index.do?serviceKey=XXXXXXXXXX&pageNo=1 &cntPerPage=10&cntntsId=메뉴ID
-    static final String API_END_POINT = "https://www.consumer.go.kr/openapi/recall/contents/index.do?";
-    static final String API_FUNC_POINT = "pageNo=1&cntPerPage=50&cntntsId=0201";
+    private final String API_END_POINT = "https://www.consumer.go.kr/openapi/recall/contents/index.do?";
+    private final String API_FUNC_POINT = "pageNo=1&cntPerPage=50&cntntsId=0201";
 
     @GetMapping("/api/food_recall_information")
 

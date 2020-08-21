@@ -22,7 +22,6 @@ public class HelloController {
     @ResponseBody
     @RequestMapping("/my")
     public String getMyAuthenticationFromSession(@AuthenticationPrincipal OAuth2User oAuth2User) {
-//        return oAuth2User.getName().toString() ;
         return oAuth2User.toString();
     }
 
